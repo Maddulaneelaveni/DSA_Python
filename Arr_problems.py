@@ -33,4 +33,9 @@ class Solution:
         return countS == countT   # Compare dictionaries
     
 # Here, I have used two dictionaries to count the frequency of each character in both strings. If the frequency counts are the same for both strings, then they are anagrams, and we return true. Otherwise, we return false.
-# 
+#  Here I used Hashinvg instead of other approaches like sorting and nested loops because :
+# We need:
+# Frequency counting
+# Fast lookup
+# Efficient comparison
+# Dictionary is perfect for this.
