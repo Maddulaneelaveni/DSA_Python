@@ -42,3 +42,23 @@ class Solution:
 # Efficient comparison
 # Dictionary is perfect for this.
 
+
+# 3. Two Sum
+
+# Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j.
+# Return the answer with the smaller index first.
+# Example 1:
+# Input: 
+# nums = [3,4,5,6], target = 7
+# Output: [0,1]
+# Explanation: nums[0] + nums[1] == 7, so we return [0, 1].
+
+
+class Solution:
+    def twoSum(self, nums, target):
+        hashmap = {}
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in hashmap:
+                return [hashmap[complement], i]
+            hashmap[num] = i
