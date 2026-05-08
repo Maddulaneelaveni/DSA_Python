@@ -33,7 +33,7 @@ class Solution:
         return countS == countT   # Compare dictionaries
     
 # Time Complexity : O(n) :  Because we traverse strings once.
-    
+# Space Complexity : O(1) : Maximum 26 characters. So space is constant.
 # Here, I have used two dictionaries to count the frequency of each character in both strings. If the frequency counts are the same for both strings, then they are anagrams, and we return true. Otherwise, we return false.
 #  Here I used Hashinvg instead of other approaches like sorting and nested loops because :
 # We need:
