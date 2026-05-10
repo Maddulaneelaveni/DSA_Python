@@ -79,3 +79,14 @@ for n in nums:
 top2 = sorted(freq, key=freq.get, reverse=True)[:2]
 print(top2)
 
+# Here, I used default dictionary because it helps us store frequencies easily without checking whether a key already exists.
+# Then we create a list called nums containing the numbers.
+# After that, freq = defaultdict(int) creates an empty dictionary where every new key automatically starts with value 0
+# the loop for n in nums: goes through each number one by one.
+# Inside the loop, freq[n] += 1 increases the count of that number. For example, when 7 appears for the first time its count becomes 1, and when it appears again the count becomes 2
+# After the loop finishes, the dictionary stores frequencies like {1:1, 7:2, 0:2, 4:1, 3:2, 2:1}.
+# sorted(freq) takes only the keys of the dictionary, which are the numbers
+# key=freq.get to sort those keys based on their frequency values stored in the dictionary. For example, freq.get(7) returns 2, freq.get(1) returns 1, and so on
+# reverse=True is used, sorting happens from highest frequency to lowest frequency.
+# The sorted order becomes something like [7, 0, 3, 1, 4, 2] because 7, 0, and 3 have the highest frequency 2
+# Finally, [:2] takes only the first two elements from that sorted list, so the output becomes [7, 0].
