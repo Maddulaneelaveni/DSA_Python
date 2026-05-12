@@ -62,10 +62,6 @@ class Solution:
             if complement in hashmap:
                 return [hashmap[complement], i]
             hashmap[num] = i
-# Time Complexity : O(n) : We traverse the list once.
-# Space Complexity : O(n) : In the worst case, we might store all n elements in the hashmap.
-# Here, I used a hashmap (dictionary) to store the indices of the numbers we have seen so far. For each number, we calculate its complement (the value needed to reach the target) and check if it exists in the hashmap. If it does, we return the indices of the complement and the current number. If not, we add the current number and its index to the hashmap for future reference.
-
 
 
 # 4.Find the first 2 highest frequency elements in an array
